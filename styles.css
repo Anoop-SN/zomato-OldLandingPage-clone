@@ -60,33 +60,87 @@
     font-weight: 390;
     font-size: 30px;
 }
-
-.hero_section_input_container{
+/* Container adjustments */
+.hero_section_input_container {
     background-color: white;
-    padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap:10px;
-    width: 50%;
+    width: 70%; /* Increased width to match the image style better */
+    height: 50px;
+    padding: 0 15px;
     border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow like the original */
 }
 
+/* Wrappers for icons + inputs */
+.location_input_wrapper, 
+.search_input_wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.location_input_wrapper {
+    width: 35%;
+}
+
+.search_input_wrapper {
+    width: 65%;
+    padding-left: 10px;
+}
+
+/* Icons styling */
+.hero_section_input_container i {
+    color: #828282; /* Default grey */
+}
+
+.fa-location-dot {
+    color: #ff7e8b !important; /* Zomato pink/red for the location pin */
+    font-size: 18px;
+}
+
+.fa-caret-down {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.fa-magnifying-glass {
+    margin-right: 10px;
+}
+
+/* Input resets */
 .input_container_location,
-.input_container_search{
-    padding: 8px;
+.input_container_search {
     border: none;
     outline: none;
-    
-}
-.input_container_location{
-    width: 35%;
-    border-right: 2px solid #e0e0e0;
-}
-.input_container_search{
-    width: 65%;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #1c1c1c;
 }
 
+/* The vertical line between sections */
+.line_separator {
+    height: 20px;
+    border-left: 1px solid #cfcfcf;
+}
+
+/* Responsive fix for mobile */
+@media only screen and (max-width: 600px) {
+    .hero_section_input_container {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        padding: 10px;
+        gap: 5px;
+    }
+    .location_input_wrapper, .search_input_wrapper {
+        width: 100%;
+    }
+    .line_separator {
+        display: none; /* Hide line on mobile as they stack */
+    }
+}
 /* screen size is 0 to 600px */
 @media only screen and (max-width:600px){
     .navbar_menu_container .user_icon{
@@ -371,6 +425,7 @@
     
 }
 /* Explore Options near me Section */
+
 
 
 
